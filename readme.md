@@ -1,9 +1,9 @@
-#ELEX7825 Lab Project
-##Robotics Class
+# ELEX7825 Lab Project
+## Robotics Class
 
 This repo is dedicated to recreating this traditionally C++ project in Python.
 
-###Getting started
+### Getting started
 
 **Warning:** There are some fairly expansive python packages that are involved in making this project run. Meaning, you may want to use a virtual environment (venv) to install the necessary dependencies to get this project going off the ground. Doing so will reduce the chance of conflicts with your Python intepreter.
 
