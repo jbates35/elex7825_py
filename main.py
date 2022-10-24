@@ -1,6 +1,10 @@
 import robot as rob
 import camera as cam
 
+import cv2, PIL, os
+
+
+
 #ALL LAB CODE GOES HERE:...
 def lab1():
     pass
@@ -9,7 +13,8 @@ def lab2():
     pass
 
 def lab3():
-    pass
+    _robot = rob.Robot()
+    
 
 def lab4():
     pass
@@ -42,6 +47,10 @@ if __name__ == "__main__":
 
     while exit==False:
         
+        #read lab intro
+        with open('intro.txt') as f:
+            print(f.read())
+            
         #get user input and select first char
         x = input("Select lab: \n")
         x = x[0]
