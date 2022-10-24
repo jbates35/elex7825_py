@@ -1,0 +1,10 @@
+*****************************************
+(1) Lab 1 - Coordinate Transforms 2D
+(2) Lab 2 - Coordinate Transforms 3D
+(3) Lab 3 - Virtual Camera
+(4) Lab 4 - Camera Calibration
+(5) Lab 5 - Forward Kinematics
+(6) Lab 6 - Inverse Kinematics
+(7) Lab 7 - Trajectories
+
+Enter Q to quit
