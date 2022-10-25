@@ -1,7 +1,7 @@
 import robot as rob
 import camera as cam
 
-import cv2, PIL, os
+import cv2
 
 
 

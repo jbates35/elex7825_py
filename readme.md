@@ -34,11 +34,7 @@ Note that the venv command may take a minute.
 
 Now you can feel free to install the necessary python libraries.
 ```
-python -m pip install numpy
-python -m pip install opencv-contrib-python
-python -m pip install cvui
-python -m pip install Pillow
-python -m pip install -U matplotlib
+python -m pip install opencv-contrib-python==4.5.5.64
 ```
 After you are done, and you've cloned this repo, [you'll want to let VSCode know where to look for the interpreter](https://code.visualstudio.com/docs/python/environments).
 
@@ -46,6 +42,6 @@ Essentially:
 - Open command palette: View -> Command Palette...
 - Type ">Python: Select Interpreter"
 - Hit "Enter interpreter path..." in the dropdown menu
-- You'll want to select the "python.exe" file, i.e. in this example it'd be in "C:\venv\cv\Scripts\python.exe"
+- You'll want to select the "python.exe" file from the virtual environment, i.e. in this example it'd be in "C:\venv\cv\Scripts\python.exe"
 
 I beliiievve that's it. Enjoy!
