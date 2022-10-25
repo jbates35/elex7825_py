@@ -116,13 +116,7 @@ class Camera:
             y=0,
             z=500
         )
-        
-    def calculate_extrinsic(self):
-        pass
-    
-    def calculate_intrinsic(self):
-        pass
-    
+
     def save_cam_param(self, filename, cam, dist):
         pass
     
