@@ -5,6 +5,7 @@ import cvui
 from math import cos, sin, radians
 import argparse
 import pickle
+import copy
 
 # Note, some stuff sourced from https://github.com/ddelago/Aruco-Marker-Calibration-and-Pose-Estimation
 # If you have questions, they may be answered there
@@ -81,9 +82,9 @@ class Extrinsic:
     def mat(self, mat_type=''):
         self.__create_mats()
 
-        if mat_type=='r':
+        if mat_type == 'r':
             return self.rmat
-        elif mat_type=='t':
+        elif mat_type == 't':
             return self.tmat
         else:
             return self.mat
@@ -91,13 +92,15 @@ class Extrinsic:
 
 class Camera:
     
-    def __init__(self, cam=0, size_square=0.06, size_mark=0.03, file_name=".\\cam_param.txt"): #, size=np.zeros((1000,600), dtype="uint8")):
-        # Camera selection on computer
-        self.cam = cam
+    def __init__(self, cam=0, size_square=0.06, size_mark=0.03, file_name=".\\cam_param.txt", size=(1000,600)):
+
+        # Camera selection on computer and set height/width
         self.video_capture = cv2.VideoCapture(cam, cv2.CAP_DSHOW)
+        self.video_capture.set(cv2.CAP_PROP_FRAME_WIDTH, 1280)
+        self.video_capture.set(cv2.CAP_PROP_FRAME_HEIGHT, 720)
         
         # Initial cv mat
-        #self.size = size
+        self.size = size
 
         # File for saving file
         self.file_name = file_name
@@ -136,6 +139,26 @@ class Camera:
         ids_all = []        # Aruco ids corresponding to corners discovered
         image_size = None   # Determined at runtime
         valid_captures = 0   # The more valid captures, the better the calibration
+
+        img = np.zeros(self.size, dtype=np.uint8)
+        img_copy = np.zeros((1280, 720), dtype=np.uint8)
+
+        while self.video_capture.isOpened():
+
+            # Get frame
+            ret, img = self.video_capture.read()
+
+            # If camera is in error, break
+            if ret is False:
+                break
+
+            img_copy = copy.deepcopy(img)
+
+
+
+
+
+
 
 
     def detect_charuco(self):
